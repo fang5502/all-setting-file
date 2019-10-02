@@ -1,0 +1,4 @@
+{
+	"editor_argument_format": "-n ${file}:${line}:${col}",
+	"editor_path": "D:\\Program Files\\Sublime Text 3\\sublime_text.exe"
+}

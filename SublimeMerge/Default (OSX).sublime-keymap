@@ -1,7 +1,7 @@
 [
-	{ "keys": ["ctrl+l"], "command": "toggle_location_bar" },
+	{ "keys": ["super+l"], "command": "toggle_location_bar" },
 	{
-		"keys": ["ctrl+e"],
+		"keys": ["super+e"],
 	    "caption": "Open in Editor…",
 	    "command": "open_in_editor",
 	    "args": { "path": "$working_dir/$path", "line": "$line", "col": "$col" }

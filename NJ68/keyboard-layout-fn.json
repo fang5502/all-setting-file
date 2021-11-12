@@ -1,0 +1,168 @@
+[
+  [
+    "ESC",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "F10",
+    "F11",
+    "F12",
+    {
+      "w": 2
+    },
+    "Delete",
+    {
+      "x": 0.5
+    },
+    "Custom Mode Swap"
+  ],
+  [
+    {
+      "w": 1.5
+    },
+    "Light Sleep For BT",
+    "BT1",
+    "BT2",
+    "BT3",
+    "BT/USB Mode Swap",
+    "Left Win/Alt Swap",
+    {
+      "a": 7
+    },
+    "",
+    {
+      "a": 4
+    },
+    "Page Up",
+    "Up Arrow",
+    "Page Down",
+    "Print Screen",
+    "Scroll Lock",
+    "Pause",
+    {
+      "w": 1.5
+    },
+    "Lamp Effect",
+    {
+      "x": 0.5
+    },
+    "Mute"
+  ],
+  [
+    {
+      "w": 1.75
+    },
+    "FN",
+    "Breathe Frequence -",
+    "Breathe Frequence +",
+    {
+      "a": 7
+    },
+    "",
+    {
+      "a": 4
+    },
+    "Mac FN Lock",
+    {
+      "a": 7
+    },
+    "",
+    {
+      "a": 4
+    },
+    "Round Of Shower Color",
+    "Left Arrow",
+    "Down Arrow",
+    "Right Arrow",
+    {
+      "a": 7
+    },
+    "",
+    "",
+    {
+      "a": 4,
+      "w": 2.25
+    },
+    "Color Change",
+    {
+      "x": 0.5
+    },
+    "Volume Up"
+  ],
+  [
+    {
+      "w": 2.25
+    },
+    "Shift",
+    "Backlight Lightness -",
+    "Backlight Lightness +",
+    "Explorer",
+    {
+      "a": 7
+    },
+    "",
+    "",
+    {
+      "a": 4
+    },
+    "Home",
+    "End",
+    {
+      "a": 7
+    },
+    "",
+    "",
+    "",
+    {
+      "a": 4,
+      "w": 2.25
+    },
+    "Power Save",
+    "Page Up",
+    "Volume Down"
+  ],
+  [
+    {
+      "w": 1.25
+    },
+    "Caps/Ctrl Swap",
+    {
+      "a": 7
+    },
+    "",
+    {
+      "w": 1.25
+    },
+    "",
+    {
+      "w": 6.25
+    },
+    "",
+    {
+      "a": 4,
+      "w": 1.25
+    },
+    "FN",
+    {
+      "a": 7,
+      "w": 1.25
+    },
+    "",
+    {
+      "w": 1.25
+    },
+    "",
+    {
+      "a": 4
+    },
+    "Home",
+    "Page Down",
+    "End"
+  ]
+]

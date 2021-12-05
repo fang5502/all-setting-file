@@ -1,0 +1,144 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=100
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/fang5502/.zshrc'
+
+#自動補全選項
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' menu select
+zstyle ':completion:*:*:default' force-list always
+zstyle ':completion:*' select-prompt '%SSelect: lines: %L matches: %M [%p]'
+
+zstyle ':completion:*:match:*' original only
+zstyle ':completion::prefix-1:*' completer _complete
+zstyle ':completion:predict:*' completer _complete
+zstyle ':completion:incremental:*' completer _complete _correct
+zstyle ':completion:*' completer _complete _prefix _correct _prefix _match _approximate
+
+#路徑補全
+zstyle ':completion:*' expand 'yes'
+zstyle ':completion:*' squeeze-slashes 'yes'
+zstyle ':completion::complete:*' '\\'
+
+#彩色補全菜單
+# eval $(dircolors -b)
+export ZLSCOLORS="${LS_COLORS}"
+zmodload zsh/complist
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+
+#修正大小寫
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+#錯誤校正
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+
+#kill 命令補全
+# compdef pkill=killall
+# zstyle ':completion:*:*:kill:*' menu yes select
+# zstyle ':completion:*:*:*:*:processes' force-list always
+# zstyle ':completion:*:processes' command 'ps -au$USER'
+
+#補全類型提示分組
+zstyle ':completion:*:matches' group 'yes'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:options' auto-description '%d'
+zstyle ':completion:*:descriptions' format $'\e[01;33m -- %d --\e[0m'
+zstyle ':completion:*:messages' format $'\e[01;35m -- %d --\e[0m'
+zstyle ':completion:*:warnings' format $'\e[01;31m -- No Matches Found --\e[0m'
+zstyle ':completion:*:corrections' format $'\e[01;32m -- %d (errors: %e) --\e[0m'
+
+# cd ~ 補全順序
+zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
+#}}}
+
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
+
+### End of Zinit's installer chunk
+
+# zinit plugin
+# zinit light zsh-users/zsh-autosuggestions
+# zinit light zdharma/fast-syntax-highlighting
+# zinit ice blockf
+# zinit light zsh-users/zsh-completions
+# zi wait'0a' lucid has'kubectl' from'gh-r' for \
+#  bpick'*kubectx*' \
+#  id-as'kubectx' \
+#     sbin'kubectx' ahmetb/kubectx \
+#  bpick'*kubens*' \
+#  id-as'kubens' \
+#     sbin'kubens' ahmetb/kubectx \
+zinit wait lucid for \
+ atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zdharma/fast-syntax-highlighting \
+ blockf \
+    zsh-users/zsh-completions \
+ atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
+# zplugin snippet OMZ::plugins/zsh-completions/zsh-completions.plugin.zsh
+
+
+
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# alias
+alias ls='ls -G'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias android-studio="open -a /Applications/Android\ Studio.app/"
+alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ANDROID_HOME=/Users/fang5502/Library/Android/sdk
+export PATH=$PATH:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/emulator
+# Add environment variable SDKBOX_HOME for sdkbox installer
+export SDKBOX_HOME=/Users/fang5502/.sdkbox
+export PATH=${SDKBOX_HOME}/bin:$PATH
+export GOOGLE_APPLICATION_CREDENTIALS="~/Downloads/Go Bike-3b378ad88732.json"
+export PATH=$PATH:/Users/fang5502/Library/Python/2.7/bin

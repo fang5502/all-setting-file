@@ -478,12 +478,16 @@ function cccapk {
                 $FlavorPath = "debug"
             }
             $ApkFolder = "$ExecPath/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/build/outputs/apk/$FlavorPath"
-            $ApkPath = Get-ChildItem -Path $ApkFolder -Recurse -Include *.apk -ErrorAction Stop
+            $ApkPath = Get-ChildItem -Path $ApkFolder -Recurse -Include "*$FlavorPath.apk" -ErrorAction Stop
 
             if ($PathOnly) {
                 Write-Output $ApkFolder
             } else {
-                Write-Output $ApkPath.FullName
+                if ($ApkPath.Count -gt 1) {
+                    Write-Error "Multiple apk files found in $ApkFolder"
+                }
+
+                Write-Output $ApkPath[0].FullName
             }
         }
         catch {

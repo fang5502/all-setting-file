@@ -467,7 +467,11 @@ function cccapk {
 
         # 是否只顯示 apk 路徑
         [Switch]
-        $PathOnly = $False
+        $PathOnly = $False,
+
+        # 是否為 bundle 路徑
+        [Switch]
+        $Bundle = $False
     )
 
     process {
@@ -477,8 +481,15 @@ function cccapk {
             if ($DebugFlag) {
                 $FlavorPath = "debug"
             }
-            $ApkFolder = "$ExecPath/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/build/outputs/apk/$FlavorPath"
-            $ApkPath = Get-ChildItem -Path $ApkFolder -Recurse -Include "*$FlavorPath.apk" -ErrorAction Stop
+            $Extension = "apk"
+            $BundlePath = "apk"
+            if ($Bundle) {
+                $BundlePath = "bundle"
+                $Extension = "aab"
+            }
+
+            $ApkFolder = "$ExecPath/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/build/outputs/$BundlePath/$FlavorPath"
+            $ApkPath = Get-ChildItem -Path $ApkFolder -Recurse -Include "*$FlavorPath.$Extension" -ErrorAction Stop
 
             if ($PathOnly) {
                 Write-Output $ApkFolder

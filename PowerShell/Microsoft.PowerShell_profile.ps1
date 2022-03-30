@@ -5,11 +5,16 @@ Import-Module -Name Terminal-Icons
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme powerlevel10k_classic
 Import-Module posh-git
+Import-Module npm-completion
+
 
 if ($host.Name -eq 'ConsoleHost')
 {
     Import-Module PSReadLine
 }
+
+# 不顯示進度條 (default 'Continue')
+$ProgressPreference = 'SilentlyContinue'
 
 # 歷史紀錄
 Set-PSReadLineOption -PredictionSource History

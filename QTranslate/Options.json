@@ -2,7 +2,7 @@
    "Application": {
       "SaveHistoryPath": "",
       "HistoryFilterFavorites": false,
-      "OptionsPageIndex": 0,
+      "OptionsPageIndex": 7,
       "HistoryFilter": ""
    },
    "Exceptions": {
@@ -13,8 +13,8 @@
    "Contents": {
       "EditBackTranslation": "",
       "SaveOnExit": true,
-      "EditTranslation": "交互的\r\r形容詞:\r    互動 (interactive)",
-      "EditSource": "interactive"
+      "EditTranslation": "",
+      "EditSource": ""
    },
    "Advanced": {
       "EnableSlowerListening": true,
@@ -29,7 +29,7 @@
       "PreferredDomain": "com"
    },
    "Appearance": {
-      "EnableWindowStyle": false,
+      "EnableWindowStyle": true,
       "PopupAutoSize": true,
       "ColorFrame": 8023133,
       "PopupPinWhenDragging": true,
@@ -74,7 +74,7 @@
    "Update": {
       "CheckForUpdates": false
    },
-   "DisabledServices": [12, 13, 9, 11, 26, 28, 30],
+   "DisabledServices": [12, 13, 11, 26, 28, 30],
    "Proxy": {
       "Password": "",
       "Scheme": 0,
@@ -83,11 +83,12 @@
       "Username": "",
       "Port": 8080
    },
-   "DictionariesOrder": [10, 19, 20, 14, 17, 18, 21, 22, 24, 25, 26, 29],
+   "DictionariesOrder": [10, 19, 20, 14, 17, 18, 22, 24, 25, 26, 29],
    "DisabledLanguages": [],
-   "DisabledDictionaries": [19, 20, 14, 17, 18, 21, 22, 24, 25, 29],
+   "DisabledDictionaries": [19, 20, 14, 17, 18, 22, 24, 25, 29],
    "Dictionary": {
       "ShowServicesPane": true,
+      "DictionaryZoom": 100,
       "DictionaryExactSearch": true
    },
    "LanguagePairs": [[12, 17], [17, 12]],
@@ -97,16 +98,16 @@
       "LanguageKeyboard": 17,
       "AutoCleanupOfTranslation": false,
       "MouseMode": 0,
-      "WindowPopupPlacement": "2C0000001000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF94050000F90200008007000040030000",
+      "WindowPopupPlacement": "2C0000001000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC30900001E030000B80A000010040000",
       "ClearHistoryOnExit": false,
       "EnableHistory": true,
       "WindowKeyboardPlacement": "2C0000001000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD1020000A2010000AF0400006F020000",
       "ShowServicesPane": true,
       "MinimizeToTrayOnMinimize": false,
-      "WindowMainPlacement": "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDF090000AF010000D40C000085030000",
+      "WindowMainPlacement": "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD40800001A020000C90B0000F0030000",
       "BackTranslation": false,
       "WindowHistoryPlacement": "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCB02000065010000B5040000AC020000",
-      "WindowOptionsPlacement": "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5F020000DF010000E904000066030000",
+      "WindowOptionsPlacement": "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0080000000100005A0B000087020000",
       "ActiveServices": [1],
       "UseSmartDetection": true,
       "ShowMiddlePane": true,
@@ -121,7 +122,7 @@
       "MainWindowStartupAction": 0,
       "ActiveDictionaryServices": [26],
       "AlwaysDetectLanguage": false,
-      "MainWindowShowOnLoad": false,
+      "MainWindowShowOnLoad": true,
       "MinimizeToTrayOnClose": true,
       "ExpandHistoryItems": false,
       "BackTranslationSplitterPos": 151,
@@ -130,10 +131,10 @@
       "ClearOnDragDrop": true,
       "TextSize": 12
    },
-   "ServicesOrder": [1, 5, 12, 13, 9, 11, 26, 28, 30, 31],
+   "ServicesOrder": [1, 5, 12, 13, 11, 26, 28, 30, 31],
    "AutoDetection": {
       "LanguageFirst": 12,
-      "LanguageSecond": 17,
+      "LanguageSecond": 60,
       "LanguageSpeechRecognition": 12
    }
 }

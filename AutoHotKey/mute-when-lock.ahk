@@ -1,6 +1,7 @@
 ; https://www.reddit.com/r/AutoHotkey/comments/y24fxe/mute_speakers_for_windows_lock_screen/
 
 #SingleInstance, Force
+#NoTrayIcon
 
 SessionChange(true)
 WM_WTSSESSION_CHANGE(wParam, lParam) {

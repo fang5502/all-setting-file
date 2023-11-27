@@ -2,11 +2,11 @@ using namespace System.Management.Automation
 using namespace System.Management.Automation.Language
 
 Import-Module -Name Terminal-Icons
-Import-Module oh-my-posh
-Set-PoshPrompt -Theme powerlevel10k_classic
 Import-Module posh-git
 Import-Module npm-completion
 
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\atomic.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh | Invoke-Expression
 
 if ($host.Name -eq 'ConsoleHost')
 {
@@ -18,7 +18,13 @@ $ProgressPreference = 'SilentlyContinue'
 
 # 歷史紀錄
 Set-PSReadLineOption -PredictionSource History
-Set-PSReadLineOption -PredictionViewStyle ListView
+if ($env:TERM_PROGRAM -eq "vscode") {
+    # Use inline prediction view in VSCode to avoid: WARNING: The prediction 'ListView' is temporarily disabled because the current window size of the console is too small. To use the 'ListView', please make sure the 'WindowWidth' is not less than '54' and the 'WindowHeight' is not less than '15'.
+    Set-PSReadLineOption -PredictionViewStyle InlineView
+}
+else {
+    Set-PSReadLineOption -PredictionViewStyle ListView
+}
 # Set-PSReadLineOption -EditMode Windows
 
 # 設定按下 Ctrl+上 可以後向搜索歷史記錄
@@ -515,4 +521,6 @@ function cccapk {
 }
 
 # 清除 console 輸出
-Clear-Host
+# Clear-Host
+
+if(Test-Path 'C:\Users\fang\.inshellisense\key-bindings-pwsh.ps1' -PathType Leaf){. C:\Users\fang\.inshellisense\key-bindings-pwsh.ps1}

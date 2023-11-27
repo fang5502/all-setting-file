@@ -30,7 +30,7 @@
             "style": "folder"
           },
           "style": "powerline",
-          "template": " {{ .Path }} ",
+          "template": " \uf07b\uea9c {{ .Path }} ",
           "type": "path"
         },
         {
@@ -211,7 +211,7 @@
             "windows": "\ue70f"
           },
           "style": "diamond",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}<#262626> \ue0b2</>",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}<#222222> \ue0b2</>",
           "type": "os"
         },
         {
@@ -266,7 +266,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\ue285\ueb9e ",
+          "template": "\ue285\ueab6 ",
           "type": "status"
         }
       ],

@@ -1,4 +1,16 @@
 {
-	"editor_argument_format": "-n ${file}:${line}:${col}",
-	"editor_path": "D:\\Program Files\\Sublime Text 3\\sublime_text.exe"
+	"expand_merge_commits_by_default": false,
+	"font_size": 13,
+	"translate_tabs_to_spaces": true,
+	"side_bar_layout": "locations_as_column",
+	"hardware_acceleration": "none",
+	"always_show_command_status": true,
+	"themed_title_bar": true,
+	"trim_trailing_white_space_on_save": true,
+	/*"auto_fetch_delay": 10,*/
+	"ignore_diff_white_space": false,
+	"diff_algorithm": "match_git",
+	"git_binary": "C:\\Program Files\\Git\\cmd\\git.exe",
+	"editor_argument_format": "${file}:${line}:${col} -n",
+	"visible_carriage_returns_at_eol": true,
 }

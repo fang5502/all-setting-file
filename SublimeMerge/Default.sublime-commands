@@ -1,0 +1,12 @@
+[
+    {
+        "caption": "Show Remote",
+        "command": "git",
+        "args": {"argv": ["remote", "-v"]}
+    },
+    {
+        "caption": "Clear Empty Folder",
+        "command": "git",
+        "args": {"argv": ["clear", "-fd"]}
+    }
+]

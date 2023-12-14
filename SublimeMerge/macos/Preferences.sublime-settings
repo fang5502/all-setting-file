@@ -1,0 +1,7 @@
+{
+	"expand_merge_commits_by_default": true,
+	"font_size": 14,
+	"translate_tabs_to_spaces": true,
+	"render_commit_dialog_message_at_top": true,
+	"side_bar_layout": "locations_as_column",
+}

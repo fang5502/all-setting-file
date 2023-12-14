@@ -1,0 +1,12 @@
+[
+    {
+        "caption": "Show Remote",
+        "command": "git",
+        "args": { "argv": ["remote", "-v"] }
+    },
+    {
+        "caption": "Push All",
+        "command": "git",
+        "args": { "argv": ["push", "--all", "origin"] }
+    }
+]

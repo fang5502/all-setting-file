@@ -63,10 +63,6 @@
                 "antialiasingMode": "grayscale",
                 "colorScheme": "My One Half Dark",
                 "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe -NoLogo",
-                "font": 
-                {
-                    "face": "CaskaydiaCove Nerd Font Mono"
-                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "intenseTextStyle": "none",

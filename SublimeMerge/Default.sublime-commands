@@ -8,5 +8,10 @@
         "caption": "Clear Empty Folder",
         "command": "git",
         "args": {"argv": ["clear", "-fd"]}
+    },
+    {
+        "caption": "Show Config",
+        "command": "git",
+        "args": {"argv": ["config", "--list"]}
     }
 ]

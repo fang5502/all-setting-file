@@ -10,7 +10,12 @@
 	/*"auto_fetch_delay": 10,*/
 	"ignore_diff_white_space": false,
 	"diff_algorithm": "match_git",
-	"git_binary": "C:\\Program Files\\Git\\cmd\\git.exe",
 	"editor_argument_format": "${file}:${line}:${col} -n",
 	"visible_carriage_returns_at_eol": true,
+	"git_binary": "C:\\Program Files\\Git\\bin\\git.exe",
+	"editor_path": "C:\\Users\\fang\\scoop\\apps\\sublime-text\\current\\sublime_text.exe",
+	"commit_graph_ordering": "commit_date",
+	"diff_style": "side-by-side",
+	"image_diff_style": "side-by-side",
+	"theme": "auto"
 }

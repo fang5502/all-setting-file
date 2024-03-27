@@ -357,6 +357,8 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 # 移除兩個不實用的 Cmdlet Aliases
 If (Test-Path Alias:curl) {Remove-Item Alias:curl}
 If (Test-Path Alias:wget) {Remove-Item Alias:wget}
+# 加入 Aliases
+new-alias grep findstr
 
 # 快速開啟 c:\windows\system32\drivers\etc\hosts 檔案
 function hosts { notepad c:\windows\system32\drivers\etc\hosts }

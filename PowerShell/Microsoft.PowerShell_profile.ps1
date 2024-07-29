@@ -350,8 +350,32 @@ Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
     param($commandName, $wordToComplete, $cursorPosition)
         dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
-            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+        [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
     }
+}
+
+# PowerShell parameter completion shim for the npm CLI
+Register-ArgumentCompleter -Native -CommandName npm -ScriptBlock {
+    param($wordToComplete, $commandAst, $cursorPosition)
+        $Local:ast = $commandAst.ToString().Replace(' ', '')
+        if ($Local:ast -eq 'npm') {
+            $command = 'run install start'
+            $array = $command.Split(' ')
+            $array | 
+                Where-Object { $_ -like "$wordToComplete*" } |
+                ForEach-Object {
+                    New-Object -Type System.Management.Automation.CompletionResult -ArgumentList $_
+                }
+        }
+        if ($Local:ast -eq 'npmrun') {
+            $scripts = (Get-Content .\package.json | ConvertFrom-Json).scripts
+            $scripts |
+                Get-Member -MemberType NoteProperty |
+                Where-Object { $_.Name -like "$wordToComplete*" } |
+                ForEach-Object {
+                    New-Object -Type System.Management.Automation.CompletionResult -ArgumentList $_.Name
+                }
+        }
 }
 
 # 移除兩個不實用的 Cmdlet Aliases

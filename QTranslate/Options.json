@@ -2,7 +2,7 @@
    "Application": {
       "SaveHistoryPath": "",
       "HistoryFilterFavorites": false,
-      "OptionsPageIndex": 7,
+      "OptionsPageIndex": 1,
       "HistoryFilter": ""
    },
    "Exceptions": {
@@ -48,7 +48,7 @@
    },
    "HotKeys": {
       "EnableHotKeys": true,
-      "HotKeyListenText": 700,
+      "HotKeyListenText": 444,
       "HotKeyTranslateClipboardInMainWindow": 0,
       "HotKeyReplaceSelection": 0,
       "HotKeyHistory": 0,
@@ -63,8 +63,8 @@
       "HotKeyListenTranslation": 0,
       "HotKeyTranslateClipboard": 0,
       "HotKeyKeyboard": 0,
-      "HotKeyPopupWindow": 702,
-      "HotKeyMainWindow": 33280
+      "HotKeyPopupWindow": 446,
+      "HotKeyMainWindow": 337
    },
    "OfflineDictionaries": [],
    "Ocr": {
